@@ -70,52 +70,52 @@ Final Result -> Quotient = 4, Remainder = 3
 ```bash
 gcc sanjana_mult.c -o sanjana_mult
 ./sanjana_mult
-
-Restoring Division
+```
+### Restoring Division
+```bash
 gcc sanjana_restoring.c -o sanjana_restoring
 ./sanjana_restoring
-
-Non-Restoring Division
+```
+### Non-Restoring Division
+```bash
 gcc sanjana_nonrestoring.c -o sanjana_nonrestoring
 ./sanjana_nonrestoring
+```
+---
+
+## Sample Output Screenshots
+
+### Below are example outputs of the programs:
+
+### Sequential Multiplication:
+<img width="190" height="64" alt="Screenshot 2025-09-13 064955" src="https://github.com/user-attachments/assets/f7ae5c0c-61fc-4c97-91cd-ad50295d04b6" />
+
+### Restoring Division:
+<img width="327" height="72" alt="Screenshot 2025-09-13 065135" src="https://github.com/user-attachments/assets/16474cb1-c0c5-4d7b-8418-fd59cb17fecc" />
+
+### Non-Restoring Division:
+<img width="385" height="164" alt="Screenshot 2025-09-13 065232" src="https://github.com/user-attachments/assets/1206ce66-31ad-4333-8e63-5f97739f0602" />
 
 ---
 
-Sample Output Screenshots
+## Notes / Algorithm Explanation
 
-Below are example outputs of the programs:
-
-Sequential Multiplication:
-
-
-Restoring Division:
-
-
-Non-Restoring Division:
-
-
-Notes / Algorithm Explanation
-
-Sequential (Shift-Add) Multiplication:
+### Sequential (Shift-Add) Multiplication:
 Multiplies integers by examining each bit of the multiplier. If the bit is 1, the multiplicand shifted by the bit position is added to the product. Supports signed integers using 2's complement.
 
-Restoring Division:
+### Restoring Division:
 Shifts dividend into an accumulator, subtracts the divisor, and restores if the subtraction would result in negative remainder. Produces quotient and remainder.
 
-Non-Restoring Division:
+### Non-Restoring Division:
 Similar to restoring division, but the operation depends on the sign of the accumulator. No restoring step is needed after every subtraction; a final correction is applied if necessary.
 
-Comparison:
+### Comparison:
 Restoring division always restores the remainder if subtraction is negative, while non-restoring is faster as it only corrects at the end.
+---
 
-Files
-
+## Files
 sanjana_mult.c
-
 sanjana_restoring.c
-
 sanjana_nonrestoring.c
-
 README.md
-
 report.pdf
