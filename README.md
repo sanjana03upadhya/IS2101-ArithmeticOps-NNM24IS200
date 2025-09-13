@@ -111,4 +111,4 @@ Similar to restoring division, but the operation depends on the sign of the accu
 
 ### Comparison:
 Restoring division always restores the remainder if subtraction is negative, while non-restoring is faster as it only corrects at the end.
----
+
